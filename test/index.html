@@ -1,0 +1,82 @@
+
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Simpla Email Demo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Include Simpla, Netlify auth adapter, and cross-browser polyfill-->
+    <script src="https://unpkg.com/simpla@^3.0.0"></script>
+    <script src="https://unpkg.com/simpla@^3.0.0/adapters/netlify.js"></script>
+    <script src="https://unpkg.com/webcomponents.js@^0.7.24/webcomponents-lite.min.js" async></script>
+
+    <!-- Init Simpla -->
+    <script>
+      Simpla.init({
+        // The Github repo you want Simpla to use
+        repo: 'kaydwithers/simpla-email-demo',
+
+        // Netlify auth adapter, initialize with your Netlify site name
+        auth: new SimplaNetlify({ site: 'simpla-email-demo' }),
+
+        // Public content source (optional)
+        // Defaults to fetching directly from Github
+        source: 'https://simpla-email-demo.netlify.com/'
+      });
+    </script>
+
+    <!-- Import Simpla elements -->
+    <link rel="import" href="/bower_components/simpla-admin/simpla-admin.html" async>
+    <link rel="import" href="/bower_components/simpla-article/simpla-article.html">
+    <link rel="import" href="/bower_components/simpla-collection/simpla-collection.html">
+    <link rel="import" href="/bower_components/simpla-img/simpla-img.html">
+    <link rel="import" href="/bower_components/simpla-link/simpla-link.html">
+    <link rel="import" href="/bower_components/simpla-text/simpla-text.html">
+    <link rel="import" href="/bower_components/simpla-paths/simpla-paths.html">
+
+  </head>
+
+  <body>
+    <main>
+
+      <!-- Preheader -->
+      <p><b>Preheader:</b> <simpla-text path="/introduction/preheader" placeholder="Type a preheader…">[Default] preheader</simpla-text></p>
+
+      <!-- Heading -->
+      <h1><simpla-text path="/introduction/heading" placeholder="Type a heading">[Default] heading</simpla-text></h1>
+
+      <!-- Article -->
+      <simpla-collection sid="article">
+        <template>
+          <div sid="[item]">
+
+            <!-- Creates a unique path. i.e /article/itemA/image -->
+            <img 
+              alt="" 
+              class="" 
+              placeholder="url(https://placehold.it/700x280)" 
+              is="simpla-img" 
+              sid="image" 
+            />
+
+            <h4><simpla-text sid="title" placeholder="Type title…">[Default] title</simpla-text></h4>
+
+            <p>
+              <simpla-text sid="content" placeholder="Type content…">[Default] content</simpla-text> 
+              <simpla-link sid="href" placeholder="Type href…">
+                <simpla-text sid="linkText" placeholder="Type linkText…">[Default] linkText</simpla-text>
+              </simpla-link>
+            </p>
+            
+          </div>
+        </template>
+      </simpla-collection>
+
+    </main>
+  </body>
+</html>
