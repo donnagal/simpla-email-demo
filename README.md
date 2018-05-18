@@ -4,7 +4,7 @@
 
 ## Preview
 
-[![Creative Preview](hhttps://camo.githubusercontent.com/2386d7c94de5a001912fa344294a8f845a24fb5a/68747470733a2f2f7777772e73696d706c616a732e6f72672f6173736574732f7075626c69632f6c6f676f2e706e67)](https://www.simplajs.org/)
+[![Creative Preview](https://camo.githubusercontent.com/2386d7c94de5a001912fa344294a8f845a24fb5a/68747470733a2f2f7777772e73696d706c616a732e6f72672f6173736574732f7075626c69632f6c6f676f2e706e67)](https://www.simplajs.org/)
 
 
 ## Status
